@@ -3,7 +3,9 @@ const app = express();
 const path = require('path');
 const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/shopApp', { useNewUrlParser: true, useUnifiedTopology: true })
+const Product = require('./models/product');
+
+mongoose.connect('mongodb://localhost:27017/farmStand', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
     })
