@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const mongoose = require("mongoose");
+var methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+
 
 const Product = require('./models/product');
 
